@@ -18,12 +18,11 @@ TODO:
 @click.argument('filename', required=False)
 def tarin(exe, filename):
     """ This script takes a compressed file and uncompresses it."""
-
     # Extractibg the file to /opt
     tfile = tarfile.open(filename)
-    # tfile.extractall('/opt')
+    tfile.extractall('/opt')
     exec_folder = '/opt/' + tfile.getnames()[0] + '/'
-    # print exec_folder
+    print "Folder copied to " + exec_folder
 
     # Finding the executable
 
